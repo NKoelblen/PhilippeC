@@ -1,135 +1,199 @@
 <?php
 /**
- * Twenty Twenty-Two: Block Patterns
+ * Twenty Seventeen Theme: Block Patterns
  *
- * @since Twenty Twenty-Two 1.0
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since Twenty Seventeen 2.5
  */
 
 /**
- * Registers block patterns and categories.
- *
- * @since Twenty Twenty-Two 1.0
- *
- * @return void
+ * Register Block Pattern Category.
  */
-function twentytwentytwo_register_block_patterns() {
-	$block_pattern_categories = array(
-		'featured'              => array( 'label' => __( 'Featured', 'twentytwentytwo' ) ),
-		'footer'                => array( 'label' => __( 'Footers', 'twentytwentytwo' ) ),
-		'header'                => array( 'label' => __( 'Headers', 'twentytwentytwo' ) ),
-		'query'                 => array( 'label' => __( 'Query', 'twentytwentytwo' ) ),
-		'twentytwentytwo_pages' => array( 'label' => __( 'Pages', 'twentytwentytwo' ) ),
+if ( function_exists( 'register_block_pattern_category' ) ) {
+
+	register_block_pattern_category(
+		'twentyseventeen',
+		array( 'label' => __( 'Twenty Seventeen', 'twentyseventeen' ) )
 	);
-
-	/**
-	 * Filters the theme block pattern categories.
-	 *
-	 * @since Twenty Twenty-Two 1.0
-	 *
-	 * @param array[] $block_pattern_categories {
-	 *     An associative array of block pattern categories, keyed by category name.
-	 *
-	 *     @type array[] $properties {
-	 *         An array of block category properties.
-	 *
-	 *         @type string $label A human-readable label for the pattern category.
-	 *     }
-	 * }
-	 */
-	$block_pattern_categories = apply_filters( 'twentytwentytwo_block_pattern_categories', $block_pattern_categories );
-
-	foreach ( $block_pattern_categories as $name => $properties ) {
-		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
-			register_block_pattern_category( $name, $properties );
-		}
-	}
-
-	$block_patterns = array(
-		'footer-default',
-		'footer-dark',
-		'footer-logo',
-		'footer-navigation',
-		'footer-title-tagline-social',
-		'footer-social-copyright',
-		'footer-navigation-copyright',
-		'footer-about-title-logo',
-		'footer-query-title-citation',
-		'footer-query-images-title-citation',
-		'footer-blog',
-		'general-subscribe',
-		'general-featured-posts',
-		'general-layered-images-with-duotone',
-		'general-wide-image-intro-buttons',
-		'general-large-list-names',
-		'general-video-header-details',
-		'general-list-events',
-		'general-two-images-text',
-		'general-image-with-caption',
-		'general-video-trailer',
-		'general-pricing-table',
-		'general-divider-light',
-		'general-divider-dark',
-		'header-default',
-		'header-large-dark',
-		'header-small-dark',
-		'header-image-background',
-		'header-image-background-overlay',
-		'header-with-tagline',
-		'header-text-only-green-background',
-		'header-text-only-salmon-background',
-		'header-title-and-button',
-		'header-text-only-with-tagline-black-background',
-		'header-logo-navigation-gray-background',
-		'header-logo-navigation-social-black-background',
-		'header-title-navigation-social',
-		'header-logo-navigation-offset-tagline',
-		'header-stacked',
-		'header-centered-logo',
-		'header-centered-logo-black-background',
-		'header-centered-title-navigation-social',
-		'header-title-and-button',
-		'hidden-404',
-		'hidden-bird',
-		'hidden-heading-and-bird',
-		'page-about-media-left',
-		'page-about-simple-dark',
-		'page-about-media-right',
-		'page-about-solid-color',
-		'page-about-links',
-		'page-about-links-dark',
-		'page-about-large-image-and-buttons',
-		'page-layout-image-and-text',
-		'page-layout-image-text-and-video',
-		'page-layout-two-columns',
-		'page-sidebar-poster',
-		'page-sidebar-grid-posts',
-		'page-sidebar-blog-posts',
-		'page-sidebar-blog-posts-right',
-		'query-default',
-		'query-simple-blog',
-		'query-grid',
-		'query-text-grid',
-		'query-image-grid',
-		'query-large-titles',
-		'query-irregular-grid',
-	);
-
-	/**
-	 * Filters the theme block patterns.
-	 *
-	 * @since Twenty Twenty-Two 1.0
-	 *
-	 * @param array $block_patterns List of block patterns by name.
-	 */
-	$block_patterns = apply_filters( 'twentytwentytwo_block_patterns', $block_patterns );
-
-	foreach ( $block_patterns as $block_pattern ) {
-		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
-
-		register_block_pattern(
-			'twentytwentytwo/' . $block_pattern,
-			require $pattern_file
-		);
-	}
 }
-add_action( 'init', 'twentytwentytwo_register_block_patterns', 9 );
+
+/**
+ * Register Block Patterns.
+ */
+if ( function_exists( 'register_block_pattern' ) ) {
+	register_block_pattern(
+		'twentyseventeen/large-heading-with-button',
+		array(
+			'title'      => __( 'Large Heading with Button', 'twentyseventeen' ),
+			'categories' => array( 'twentyseventeen' ),
+			'content'    => '<!-- wp:heading {"level":1,"textColor":"black","style":{"typography":{"fontSize":50}}} -->
+            <h1 class="has-black-color has-text-color" style="font-size:50px">' . __( 'Attract Leads with Marketing Campaigns that Work', 'twentyseventeen' ) . '</h1>
+            <!-- /wp:heading -->
+
+            <!-- wp:buttons -->
+            <div class="wp-block-buttons"><!-- wp:button {"borderRadius":0,"className":"is-style-fill"} -->
+            <div class="wp-block-button is-style-fill"><a class="wp-block-button__link no-border-radius">' . __( 'Our Services', 'twentyseventeen' ) . '</a></div>
+            <!-- /wp:button --></div>
+            <!-- /wp:buttons -->',
+		)
+	);
+
+	register_block_pattern(
+		'twentyseventeen/images-with-text-and-link',
+		array(
+			'title'      => __( 'Images with Text and Link', 'twentyseventeen' ),
+			'categories' => array( 'twentyseventeen' ),
+			'content'    => '<!-- wp:spacer -->
+            <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+            <!-- wp:columns -->
+            <div class="wp-block-columns"><!-- wp:column -->
+            <div class="wp-block-column">
+			<!-- wp:image {"className":"size-large"} -->
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/stripes.jpg" alt="' . __( 'Black Stripes', 'twentyseventeen' ) . '"/></figure>
+			<!-- /wp:image -->
+            <!-- wp:heading {"textColor":"black","style":{"typography":{"fontSize":45}}} -->
+            <h2 class="has-black-color has-text-color" style="font-size:45px">' . __( 'Branding', 'twentyseventeen' ) . '</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph {"textColor":"black","style":{"typography":{"lineHeight":"1.8"}}} -->
+            <p class="has-black-color has-text-color" style="line-height:1.8">' . __( 'Communicate your purpose and goals with a beautiful logo that encapsulates your business.', 'twentyseventeen' ) . '</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:paragraph {"style":{"typography":{"lineHeight":"3"}}} -->
+            <p style="line-height:3"><a href="#"><strong>' . __( 'See Case Study', 'twentyseventeen' ) . ' →</strong></a></p>
+            <!-- /wp:paragraph --></div>
+            <!-- /wp:column -->
+            <!-- wp:column -->
+            <div class="wp-block-column"><!-- wp:spacer {"height":254} -->
+            <div style="height:254px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+			<!-- wp:image {"className":"size-large"} -->
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/white-border.jpg" alt="' . __( 'White border', 'twentyseventeen' ) . '"/></figure>
+			<!-- /wp:image -->
+            <!-- wp:heading {"textColor":"black","style":{"typography":{"fontSize":45}}} -->
+            <h2 class="has-black-color has-text-color" style="font-size:45px">' . __( 'Web Design', 'twentyseventeen' ) . '</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph {"textColor":"black","style":{"typography":{"lineHeight":"1.8"}}} -->
+            <p class="has-black-color has-text-color" style="line-height:1.8">' . __( 'Need a website? We&#39;ve got you covered. Our design team will create a stunning design to transform your brand.', 'twentyseventeen' ) . '</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:paragraph {"style":{"typography":{"lineHeight":"3.0"}}} -->
+            <p style="line-height:3.0"><a href="#"><strong>' . __( 'See Case Study', 'twentyseventeen' ) . ' →</strong></a></p>
+            <!-- /wp:paragraph --></div>
+            <!-- /wp:column --></div>
+            <!-- /wp:columns -->',
+		)
+	);
+
+	register_block_pattern(
+		'twentyseventeen/images-with-link',
+		array(
+			'title'      => __( 'Images with Link', 'twentyseventeen' ),
+			'categories' => array( 'twentyseventeen' ),
+			'content'    => '<!-- wp:spacer -->
+            <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+            <!-- wp:columns {"verticalAlignment":"top"} -->
+            <div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column -->
+            <div class="wp-block-column"><!-- wp:group -->
+            <div class="wp-block-group"><div class="wp-block-group__inner-container">
+			<!-- wp:image {"align":"center","sizeSlug":"large","className":"is-style-default"} -->
+			<div class="wp-block-image is-style-default"><figure class="aligncenter size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/stripes.jpg" alt="' . __( 'Black Stripes', 'twentyseventeen' ) . '"/></figure></div>
+			<!-- /wp:image -->
+            <!-- wp:heading {"align":"left","textColor":"black","style":{"typography":{"fontSize":30}}} -->
+            <h2 class="has-text-align-left has-black-color has-text-color" style="font-size:30px">' . __( 'Branding', 'twentyseventeen' ) . '</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph {"align":"left"} -->
+            <p class="has-text-align-left"><a href="#">' . __( 'See Case Study', 'twentyseventeen' ) . ' →</a></p>
+            <!-- /wp:paragraph --></div></div>
+            <!-- /wp:group --></div>
+            <!-- /wp:column -->
+            <!-- wp:column -->
+            <div class="wp-block-column"><!-- wp:group -->
+            <div class="wp-block-group"><div class="wp-block-group__inner-container">
+			<!-- wp:image {"align":"center","sizeSlug":"large","className":"is-style-default"} -->
+			<div class="wp-block-image is-style-default"><figure class="aligncenter size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/white-border.jpg" alt="' . __( 'White border', 'twentyseventeen' ) . '"/></figure></div>
+			<!-- /wp:image -->
+            <!-- wp:heading {"align":"left","textColor":"black","style":{"typography":{"fontSize":30}}} -->
+            <h2 class="has-text-align-left has-black-color has-text-color" style="font-size:30px">' . __( 'Design', 'twentyseventeen' ) . '</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph {"align":"left"} -->
+            <p class="has-text-align-left"><a href="#">' . __( 'See Case Study', 'twentyseventeen' ) . ' →</a></p>
+            <!-- /wp:paragraph --></div></div>
+            <!-- /wp:group --></div>
+            <!-- /wp:column -->
+            <!-- wp:column -->
+            <div class="wp-block-column"><!-- wp:group -->
+            <div class="wp-block-group"><div class="wp-block-group__inner-container">
+			<!-- wp:image {"align":"center","sizeSlug":"large","className":"is-style-default"} -->
+			<div class="wp-block-image is-style-default"><figure class="aligncenter size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/direct-light.jpg" alt="' . __( 'Direct Light', 'twentyseventeen' ) . '"/></figure></div>
+			<!-- /wp:image -->
+            <!-- wp:heading {"align":"left","textColor":"black","style":{"typography":{"fontSize":30}}} -->
+            <h2 class="has-text-align-left has-black-color has-text-color" style="font-size:30px">' . __( 'Strategy', 'twentyseventeen' ) . '</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph {"align":"left"} -->
+            <p class="has-text-align-left"><a href="#">' . __( 'See Case Study', 'twentyseventeen' ) . ' →</a></p>
+            <!-- /wp:paragraph --></div></div>
+            <!-- /wp:group --></div>
+            <!-- /wp:column --></div>
+            <!-- /wp:columns -->
+            <!-- wp:spacer -->
+            <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->',
+		)
+	);
+
+	register_block_pattern(
+		'twentyseventeen/services',
+		array(
+			'title'      => __( 'Services', 'twentyseventeen' ),
+			'categories' => array( 'twentyseventeen' ),
+			'content'    => '<!-- wp:spacer -->
+            <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+            
+            <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":50}}} -->
+            <h1 style="font-size:50px">' . __( 'Our Services', 'twentyseventeen' ) . '</h1>
+            <!-- /wp:heading -->
+            
+            <!-- wp:columns -->
+            <div class="wp-block-columns"><!-- wp:column -->
+            <div class="wp-block-column">
+            <!-- wp:paragraph {"style":{"typography":{"fontSize":21, "lineHeight":"2.5"}}} -->
+            <p style="font-size:21px"><a href="#">' . __( 'Branding', 'twentyseventeen' ) . ' →</a><br><a href="#">' . __( 'Web Design', 'twentyseventeen' ) . ' →</a><br><a href="#">' . __( 'Web Development', 'twentyseventeen' ) . ' →</a></p>
+            <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:column -->
+            
+            <!-- wp:column -->
+            <div class="wp-block-column">
+            <!-- wp:paragraph {"style":{"typography":{"fontSize":21, "lineHeight":"2.5"}}} -->
+            <p style="font-size:21px"><a href="#">' . __( 'Content Strategy', 'twentyseventeen' ) . ' →</a><br><a href="#">' . __( 'Marketing &amp; SEO', 'twentyseventeen' ) . ' →</a><br><a href="#">' . __( 'Video Production', 'twentyseventeen' ) . ' →</a></p>
+            <!-- /wp:paragraph --></div>
+            <!-- /wp:column --></div>
+            <!-- /wp:columns -->
+            
+            <!-- wp:spacer -->
+            <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->',
+		)
+	);
+
+	register_block_pattern(
+		'twentyseventeen/contact-us',
+		array(
+			'title'      => __( 'Contact Us', 'twentyseventeen' ),
+			'categories' => array( 'twentyseventeen' ),
+			'content'    => '<!-- wp:cover {"customOverlayColor":"#93aab8","minHeight":700,"align":"center"} -->
+            <div class="wp-block-cover aligncenter has-background-dim" style="background-color:#93aab8;min-height:700px"><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"left","textColor":"white","style":{"typography":{"fontSize":50}}} -->
+            <p class="has-text-align-left has-white-color has-text-color" style="font-size:50px">' . __( 'We are proud to serve outstanding clients.', 'twentyseventeen' ) . '</p>
+            <!-- /wp:paragraph -->
+            
+            <!-- wp:buttons -->
+            <div class="wp-block-buttons"><!-- wp:button {"borderRadius":0,"backgroundColor":"black","textColor":"white","className":"is-style-fill"} -->
+            <div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-black-background-color has-text-color has-background no-border-radius">' . __( 'Contact us', 'twentyseventeen' ) . '</a></div>
+            <!-- /wp:button --></div>
+            <!-- /wp:buttons --></div></div>
+            <!-- /wp:cover -->',
+		)
+	);
+}
