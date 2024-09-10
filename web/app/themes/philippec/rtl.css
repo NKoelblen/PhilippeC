@@ -53,8 +53,8 @@ td:last-child {
 
 /* Forms */
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
 	margin-left: 0.5em;
 	margin-right: 0;
 }
@@ -100,7 +100,7 @@ input[type="checkbox"] {
 	right: auto;
 }
 
-.twentyseventeen-panel .recent-posts .entry-header .edit-link {
+.philippec-panel .recent-posts .entry-header .edit-link {
 	margin-left: 0;
 	margin-right: 1em;
 }
@@ -265,7 +265,7 @@ input[type="checkbox"] {
 
 /* Customizer styles */
 
-.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel .twentyseventeen-panel-title {
+.philippec-customizer.philippec-front-page .philippec-panel .philippec-panel-title {
 	left: 3.2em;
 	right: auto;
 }
@@ -287,7 +287,6 @@ input[type="checkbox"] {
 /* Media queries */
 
 @media screen and (min-width: 48em) {
-
 	body.page-template-full-width-page #primary {
 		float: none;
 	}
@@ -450,7 +449,7 @@ input[type="checkbox"] {
 	/* blog index and archive */
 
 	.blog:not(.has-sidebar) .entry-content blockquote.alignleft,
-	.twentyseventeen-front-page.page-two-column .entry-content blockquote.alignleft,
+	.philippec-front-page.page-two-column .entry-content blockquote.alignleft,
 	.archive:not(.has-sidebar) .entry-content blockquote.alignleft,
 	.page-two-column .entry-content blockquote.alignleft {
 		margin-left: 0;
@@ -458,7 +457,7 @@ input[type="checkbox"] {
 	}
 
 	.blog:not(.has-sidebar) .entry-content blockquote.alignright,
-	.twentyseventeen-front-page.page-two-column #primary .entry-content blockquote.alignright,
+	.philippec-front-page.page-two-column #primary .entry-content blockquote.alignright,
 	.archive:not(.has-sidebar) .entry-content blockquote.alignright,
 	.page-two-column #primary .entry-content blockquote.alignright {
 		margin-right: -72.5%;
@@ -535,7 +534,6 @@ input[type="checkbox"] {
 }
 
 @media screen and (min-width: 67em) {
-
 	/* Sticky posts */
 
 	.sticky .icon-thumb-tack {
@@ -545,7 +543,6 @@ input[type="checkbox"] {
 }
 
 @media screen and (min-width: 79em) {
-
 	.has-sidebar #primary .entry-content blockquote.alignright,
 	.has-sidebar #primary .entry-content blockquote.alignright.below-entry-meta {
 		margin-right: -20%;
@@ -554,7 +551,7 @@ input[type="checkbox"] {
 	.blog:not(.has-sidebar) .entry-content blockquote.alignleft,
 	.archive:not(.has-sidebar) .entry-content blockquote.alignleft,
 	.page-two-column .entry-content blockquote.alignleft,
-	.twentyseventeen-front-page .entry-content blockquote.alignleft {
+	.philippec-front-page .entry-content blockquote.alignleft {
 		margin-left: -20%;
 	}
 }

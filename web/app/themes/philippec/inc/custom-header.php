@@ -12,9 +12,10 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses twentyseventeen_header_style()
+ * @uses philippec_header_style()
  */
-function twentyseventeen_custom_header_setup() {
+function philippec_custom_header_setup()
+{
 
 	add_theme_support(
 		'custom-header',
@@ -36,14 +37,14 @@ function twentyseventeen_custom_header_setup() {
 		 * }
 		 */
 		apply_filters(
-			'twentyseventeen_custom_header_args',
+			'philippec_custom_header_args',
 			array(
-				'default-image'    => get_parent_theme_file_uri( '/assets/images/header.jpg' ),
-				'width'            => 2000,
-				'height'           => 1200,
-				'flex-height'      => true,
-				'video'            => true,
-				'wp-head-callback' => 'twentyseventeen_header_style',
+				'default-image' => get_parent_theme_file_uri('/assets/images/header.jpg'),
+				'width' => 2000,
+				'height' => 1200,
+				'flex-height' => true,
+				'video' => true,
+				'wp-head-callback' => 'philippec_header_style',
 			)
 		)
 	);
@@ -51,71 +52,74 @@ function twentyseventeen_custom_header_setup() {
 	register_default_headers(
 		array(
 			'default-image' => array(
-				'url'           => '%s/assets/images/header.jpg',
+				'url' => '%s/assets/images/header.jpg',
 				'thumbnail_url' => '%s/assets/images/header.jpg',
-				'description'   => __( 'Default Header Image', 'twentyseventeen' ),
+				'description' => __('Default Header Image', 'philippec'),
 			),
 		)
 	);
 }
-add_action( 'after_setup_theme', 'twentyseventeen_custom_header_setup' );
+add_action('after_setup_theme', 'philippec_custom_header_setup');
 
-if ( ! function_exists( 'twentyseventeen_header_style' ) ) :
+if (!function_exists('philippec_header_style')):
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see twentyseventeen_custom_header_setup().
+	 * @see philippec_custom_header_setup().
 	 */
-	function twentyseventeen_header_style() {
+	function philippec_header_style()
+	{
 		$header_text_color = get_header_textcolor();
 
 		// If no custom options for text are set, let's bail.
 		// get_header_textcolor() options: add_theme_support( 'custom-header' ) is default, hide text (returns 'blank') or any hex value.
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
+		if (get_theme_support('custom-header', 'default-text-color') === $header_text_color) {
 			return;
 		}
 
 		// If we get this far, we have custom styles. Let's do this.
 		?>
-		<style id="twentyseventeen-custom-header-styles" type="text/css">
-		<?php
-		// Has the text been hidden?
-		if ( 'blank' === $header_text_color ) :
-			?>
-		.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px, 1px, 1px, 1px);
-		}
+		<style id="philippec-custom-header-styles" type="text/css">
 			<?php
-			// If the user has set a custom color for the text use that.
-		else :
-			?>
-		.site-title a,
-		.colors-dark .site-title a,
-		.colors-custom .site-title a,
-		body.has-header-image .site-title a,
-		body.has-header-video .site-title a,
-		body.has-header-image.colors-dark .site-title a,
-		body.has-header-video.colors-dark .site-title a,
-		body.has-header-image.colors-custom .site-title a,
-		body.has-header-video.colors-custom .site-title a,
-		.site-description,
-		.colors-dark .site-description,
-		.colors-custom .site-description,
-		body.has-header-image .site-description,
-		body.has-header-video .site-description,
-		body.has-header-image.colors-dark .site-description,
-		body.has-header-video.colors-dark .site-description,
-		body.has-header-image.colors-custom .site-description,
-		body.has-header-video.colors-custom .site-description {
-			color: #<?php echo esc_attr( $header_text_color ); ?>;
-		}
-	<?php endif; ?>
-	</style>
-		<?php
+			// Has the text been hidden?
+			if ('blank' === $header_text_color):
+				?>
+				.site-title,
+				.
+			site-description {
+				position: absolute;
+					clip: rect(1px, 1px, 1px, 1px);
+				}
+					<?php
+				// If the user has set a custom color for the text use that.
+			else:
+				?>
+				.site-title a,
+				.colors-dark .site-title a,
+				.colors-custom .site-title a,
+				body.has-header-image .site-title a,
+				body.has-header-video .site-title a,
+				body.has-header-image.colors-dark .site-title a,
+				body.has-header-video.colors-dark .site-title a,
+				body.has-header-image.colors-custom .site-title a,
+				body.has-header-video.colors-custom .site-title a,
+				.site-description,
+				.colors-dark .site-description,
+				.colors-custom .site-description,
+				body.has-header-image .site-description,
+				b
+			ody.has-header-video .site-description,
+					body.has-header-image.colors-dark .site-description,
+				body.has-header-video.colors-dark .site-description,
+			body.has-header-image.colors-custom .site-description,
+					body.has-header-video.colors-custom .site-description {
+						color: #<?php echo esc_attr($header_text_color); ?>;
+					}
+			<?php endif; ?>
+			</style>
+				<?php
 	}
-endif; // End of twentyseventeen_header_style().
+endif; // End of philippec_header_style().
 
 /**
  * Customize video play/pause button in the custom header.
@@ -123,11 +127,12 @@ endif; // End of twentyseventeen_header_style().
  * @param array $settings Video settings.
  * @return array The filtered video settings.
  */
-function twentyseventeen_video_controls( $settings ) {
+function philippec_video_controls($settings)
+{
 	/* translators: Hidden accessibility text. */
-	$settings['l10n']['play'] = '<span class="screen-reader-text">' . __( 'Play background video', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'play' ) );
+	$settings['l10n']['play'] = '<span class="screen-reader-text">' . __('Play background video', 'philippec') . '</span>' . philippec_get_svg(array('icon' => 'play'));
 	/* translators: Hidden accessibility text. */
-	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'pause' ) );
+	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __('Pause background video', 'philippec') . '</span>' . philippec_get_svg(array('icon' => 'pause'));
 	return $settings;
 }
-add_filter( 'header_video_settings', 'twentyseventeen_video_controls' );
+add_filter('header_video_settings', 'philippec_video_controls');
