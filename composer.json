@@ -48,12 +48,11 @@
 		"roots/wordpress": "6.6.1",
 		"roots/wp-config": "1.0.0",
 		"roots/wp-password-bcrypt": "1.1.0",
-		"wpackagist-plugin/bulk-image-resizer": "^2.0",
-		"wpackagist-plugin/filebird": "5.6",
+		"wpackagist-theme/twentyseventeen": "^3.7",
+		"wpackagist-plugin/wordpress-seo": "^23.4",
 		"wpackagist-plugin/wp-super-cache": "^1.12",
 		"wpackagist-plugin/autoptimize": "^3.1",
-		"wpackagist-plugin/wordpress-seo": "^23.4",
-		"wpackagist-theme/twentyseventeen": "^3.7"
+		"wpackagist-plugin/filebird": "5.6"
 	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "^3.7.1",
@@ -72,7 +71,12 @@
 	"extra": {
 		"installer-paths": {
 			"web/app/mu-plugins/{$name}/": [
-				"type:wordpress-muplugin"
+				"type:wordpress-muplugin",
+				"wpackagist-plugin/wordpress-seo",
+				"wpackagist-plugin/bulk-image-resizer",
+				"wpackagist-plugin/wp-super-cache",
+				"wpackagist-plugin/autoptimize",
+				"wpackagist-plugin/filebird"
 			],
 			"web/app/plugins/{$name}/": [
 				"type:wordpress-plugin"
