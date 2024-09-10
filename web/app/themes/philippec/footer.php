@@ -7,8 +7,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  * @version 1.2
  */
 
@@ -23,20 +23,20 @@
 
 		if (has_nav_menu('social')):
 			?>
-			<nav class="social-navigation" aria-label="<?php esc_attr_e('Footer Social Links Menu', 'philippec'); ?>">
+				<nav class="social-navigation" aria-label="<?php esc_attr_e('Footer Social Links Menu', 'philippec'); ?>">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'social',
+							'menu_class' => 'social-links-menu',
+							'depth' => 1,
+							'link_before' => '<span class="screen-reader-text">',
+							'link_after' => '</span>' . philippec_get_svg(array('icon' => 'chain')),
+						)
+					);
+					?>
+				</nav><!-- .social-navigation -->
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'social',
-						'menu_class' => 'social-links-menu',
-						'depth' => 1,
-						'link_before' => '<span class="screen-reader-text">',
-						'link_after' => '</span>' . philippec_get_svg(array('icon' => 'chain')),
-					)
-				);
-				?>
-			</nav><!-- .social-navigation -->
-			<?php
 		endif;
 
 		get_template_part('template-parts/footer/site', 'info');

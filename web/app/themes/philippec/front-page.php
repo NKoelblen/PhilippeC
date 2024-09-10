@@ -7,8 +7,8 @@
  * Learn more: https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  * @version 1.0
  */
 
@@ -34,9 +34,9 @@ get_header(); ?>
 		if (0 !== philippec_panel_count() || is_customize_preview()): // If we have pages to show.
 		
 			/**
-			 * Filters the number of front page sections in Twenty Seventeen.
+			 * Filters the number of front page sections in PhilippeC.
 			 *
-			 * @since Twenty Seventeen 1.0
+			 * @since PhilippeC 1.0
 			 *
 			 * @global int|string $philippeccounter Front page section counter.
 			 *

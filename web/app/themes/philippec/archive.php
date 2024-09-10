@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  * @version 1.0
  */
 
@@ -15,12 +15,12 @@ get_header(); ?>
 <div class="wrap">
 
 	<?php if (have_posts()): ?>
-		<header class="page-header">
-			<?php
-			the_archive_title('<h1 class="page-title">', '</h1>');
-			the_archive_description('<div class="taxonomy-description">', '</div>');
-			?>
-		</header><!-- .page-header -->
+			<header class="page-header">
+				<?php
+				the_archive_title('<h1 class="page-title">', '</h1>');
+				the_archive_description('<div class="taxonomy-description">', '</div>');
+				?>
+			</header><!-- .page-header -->
 	<?php endif; ?>
 
 	<div id="primary" class="content-area">
@@ -29,31 +29,31 @@ get_header(); ?>
 			<?php
 			if (have_posts()):
 				?>
-				<?php
-				// Start the Loop.
-				while (have_posts()):
-					the_post();
+					<?php
+					// Start the Loop.
+					while (have_posts()):
+						the_post();
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that
-					 * will be used instead.
-					 */
-					get_template_part('template-parts/post/content', get_post_format());
+						/*
+						 * Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that
+						 * will be used instead.
+						 */
+						get_template_part('template-parts/post/content', get_post_format());
 
-				endwhile;
+					endwhile;
 
-				the_posts_pagination(
-					array(
-						/* translators: Hidden accessibility text. */
-						'prev_text' => philippec_get_svg(array('icon' => 'arrow-left')) . '<span class="screen-reader-text">' . __('Previous page', 'philippec') . '</span>',
-						/* translators: Hidden accessibility text. */
-						'next_text' => '<span class="screen-reader-text">' . __('Next page', 'philippec') . '</span>' . philippec_get_svg(array('icon' => 'arrow-right')),
-						/* translators: Hidden accessibility text. */
-						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'philippec') . ' </span>',
-					)
-				);
+					the_posts_pagination(
+						array(
+							/* translators: Hidden accessibility text. */
+							'prev_text' => philippec_get_svg(array('icon' => 'arrow-left')) . '<span class="screen-reader-text">' . __('Previous page', 'philippec') . '</span>',
+							/* translators: Hidden accessibility text. */
+							'next_text' => '<span class="screen-reader-text">' . __('Next page', 'philippec') . '</span>' . philippec_get_svg(array('icon' => 'arrow-right')),
+							/* translators: Hidden accessibility text. */
+							'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'philippec') . ' </span>',
+						)
+					);
 
 			else:
 

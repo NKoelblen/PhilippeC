@@ -1,10 +1,10 @@
 <?php
 /**
- * Twenty Seventeen: Color Patterns
+ * PhilippeC: Color Patterns
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  */
 
 /**
@@ -15,9 +15,9 @@ function philippec_custom_colors_css()
 	$hue = absint(get_theme_mod('colorscheme_hue', 250));
 
 	/**
-	 * Filters Twenty Seventeen default saturation level.
+	 * Filters PhilippeC default saturation level.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since PhilippeC 1.0
 	 *
 	 * @param int $saturation Color saturation level.
 	 */
@@ -26,7 +26,7 @@ function philippec_custom_colors_css()
 	$saturation = $saturation . '%';
 	$css = '
 /**
- * Twenty Seventeen: Color Patterns
+ * PhilippeC: Color Patterns
  *
  * Colors are ordered from dark to light.
  */
@@ -569,9 +569,9 @@ body.colors-custom,
 }';
 
 	/**
-	 * Filters Twenty Seventeen custom colors CSS.
+	 * Filters PhilippeC custom colors CSS.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since PhilippeC 1.0
 	 *
 	 * @param string $css        Base theme colors CSS.
 	 * @param int    $hue        The user's selected color hue.

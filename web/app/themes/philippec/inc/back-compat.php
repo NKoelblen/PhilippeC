@@ -1,22 +1,22 @@
 <?php
 /**
- * Twenty Seventeen back compat functionality
+ * PhilippeC back compat functionality
  *
- * Prevents Twenty Seventeen from running on WordPress versions prior to 4.7,
+ * Prevents PhilippeC from running on WordPress versions prior to 4.7,
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 4.7.
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  */
 
 /**
- * Prevent switching to Twenty Seventeen on old versions of WordPress.
+ * Prevent switching to PhilippeC on old versions of WordPress.
  *
  * Switches to the default theme.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  */
 function philippec_switch_theme()
 {
@@ -30,9 +30,9 @@ add_action('after_switch_theme', 'philippec_switch_theme');
  * Adds a message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * Twenty Seventeen on WordPress versions prior to 4.7.
+ * PhilippeC on WordPress versions prior to 4.7.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  *
  * @global string $wp_version WordPress version.
  */
@@ -42,7 +42,7 @@ function philippec_upgrade_notice()
 		'<div class="error"><p>%s</p></div>',
 		sprintf(
 			/* translators: %s: The current WordPress version. */
-			__('Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'philippec'),
+			__('PhilippeC requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'philippec'),
 			$GLOBALS['wp_version']
 		)
 	);
@@ -51,7 +51,7 @@ function philippec_upgrade_notice()
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to 4.7.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  *
  * @global string $wp_version WordPress version.
  */
@@ -60,7 +60,7 @@ function philippec_customize()
 	wp_die(
 		sprintf(
 			/* translators: %s: The current WordPress version. */
-			__('Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'philippec'),
+			__('PhilippeC requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'philippec'),
 			$GLOBALS['wp_version']
 		),
 		'',
@@ -74,7 +74,7 @@ add_action('load-customize.php', 'philippec_customize');
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 4.7.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  *
  * @global string $wp_version WordPress version.
  */
@@ -84,7 +84,7 @@ function philippec_preview()
 		wp_die(
 			sprintf(
 				/* translators: %s: The current WordPress version. */
-				__('Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'philippec'),
+				__('PhilippeC requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'philippec'),
 				$GLOBALS['wp_version']
 			)
 		);

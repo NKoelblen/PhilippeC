@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  * @version 1.0
  */
 
@@ -16,14 +16,14 @@ get_header(); ?>
 
 	<header class="page-header">
 		<?php if (have_posts()): ?>
-			<h1 class="page-title">
-				<?php
-				/* translators: Search query. */
-				printf(__('Search Results for: %s', 'philippec'), '<span>' . get_search_query() . '</span>');
-				?>
-			</h1>
+				<h1 class="page-title">
+					<?php
+					/* translators: Search query. */
+					printf(__('Search Results for: %s', 'philippec'), '<span>' . get_search_query() . '</span>');
+					?>
+				</h1>
 		<?php else: ?>
-			<h1 class="page-title"><?php _e('Nothing Found', 'philippec'); ?></h1>
+				<h1 class="page-title"><?php _e('Nothing Found', 'philippec'); ?></h1>
 		<?php endif; ?>
 	</header><!-- .page-header -->
 
@@ -59,10 +59,10 @@ get_header(); ?>
 			else:
 				?>
 
-				<p><?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'philippec'); ?>
-				</p>
-				<?php
-				get_search_form();
+					<p><?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'philippec'); ?>
+					</p>
+					<?php
+					get_search_form();
 
 			endif;
 			?>

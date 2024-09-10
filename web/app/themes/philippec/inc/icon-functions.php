@@ -3,8 +3,8 @@
  * SVG icons related functions and filters
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  */
 
 /**
@@ -64,7 +64,7 @@ function philippec_get_svg($args = array())
 	$aria_labelledby = '';
 
 	/*
-	 * Twenty Seventeen doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
+	 * PhilippeC doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
 	 *
 	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
 	 *
@@ -219,9 +219,9 @@ function philippec_social_links_icons()
 	);
 
 	/**
-	 * Filters Twenty Seventeen social links icons.
+	 * Filters PhilippeC social links icons.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since PhilippeC 1.0
 	 *
 	 * @param array $social_links_icons Array of social links icons.
 	 */

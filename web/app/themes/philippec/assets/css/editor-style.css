@@ -1,8 +1,7 @@
 /*
-Theme Name: Twenty Seventeen
+Theme Name: PhilippeC
 Description: Used to style the TinyMCE editor.
 */
-
 
 /**
  * Table of Contents:
@@ -37,7 +36,7 @@ button,
 input,
 select,
 textarea {
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Libre Franklin', 'Helvetica Neue', helvetica, arial, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	font-weight: 400;
@@ -144,7 +143,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-family: 'Courier 10 Pitch', Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -157,7 +156,7 @@ code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -180,33 +179,33 @@ big {
 
 blockquote,
 q {
-	quotes: "" "";
+	quotes: '' '';
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: "";
+	content: '';
 }
 
 /* Typography for Thai Font */
 
-html[lang="th"] h1,
-html[lang="th"] h2,
-html[lang="th"] h3,
-html[lang="th"] h4,
-html[lang="th"] h5,
-html[lang="th"] h6 {
+html[lang='th'] h1,
+html[lang='th'] h2,
+html[lang='th'] h3,
+html[lang='th'] h4,
+html[lang='th'] h5,
+html[lang='th'] h6 {
 	letter-spacing: 0;
 	line-height: 1.65;
 }
 
-html[lang="th"] body,
-html[lang="th"] button,
-html[lang="th"] input,
-html[lang="th"] select,
-html[lang="th"] textarea {
+html[lang='th'] body,
+html[lang='th'] button,
+html[lang='th'] input,
+html[lang='th'] select,
+html[lang='th'] textarea {
 	line-height: 1.8;
 }
 
@@ -342,7 +341,7 @@ object {
 	max-width: 100%;
 }
 
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*='wp-image-'] {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;

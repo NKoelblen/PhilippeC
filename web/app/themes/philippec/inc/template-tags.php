@@ -5,8 +5,8 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  */
 
 if (!function_exists('philippec_posted_on')):
@@ -230,14 +230,14 @@ if (!function_exists('wp_body_open')):
 	 *
 	 * Added for backward compatibility to support pre-5.2.0 WordPress versions.
 	 *
-	 * @since Twenty Seventeen 2.2
+	 * @since PhilippeC 2.2
 	 */
 	function wp_body_open()
 	{
 		/**
 		 * Fires after the opening <body> tag.
 		 *
-		 * @since Twenty Seventeen 2.2
+		 * @since PhilippeC 2.2
 		 */
 		do_action('wp_body_open');
 	}

@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  * @version 1.2
  */
 
@@ -42,11 +42,11 @@
 	</header><!-- .entry-header -->
 
 	<?php if ('' !== get_the_post_thumbnail() && !is_single()): ?>
-		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail('philippec-featured-image'); ?>
-			</a>
-		</div><!-- .post-thumbnail -->
+			<div class="post-thumbnail">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail('philippec-featured-image'); ?>
+				</a>
+			</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
 	<div class="entry-content">

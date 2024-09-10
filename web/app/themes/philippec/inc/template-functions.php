@@ -3,8 +3,8 @@
  * Additional features to allow styling of the templates.
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  */
 
 /**
@@ -55,9 +55,9 @@ function philippec_body_classes($classes)
 	}
 
 	// Add class if the site title and tagline is hidden.
-	if ('blank' === get_header_textcolor()) {
-		$classes[] = 'title-tagline-hidden';
-	}
+	// if ('blank' === get_header_textcolor()) {
+	// 	$classes[] = 'title-tagline-hidden';
+	// }
 
 	// Get the colorscheme or the default if there isn't one.
 	$colors = philippec_sanitize_colorscheme(get_theme_mod('colorscheme', 'light'));
@@ -80,9 +80,9 @@ function philippec_panel_count()
 	$panel_count = 0;
 
 	/**
-	 * Filters the number of front page sections in Twenty Seventeen.
+	 * Filters the number of front page sections in PhilippeC.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since PhilippeC 1.0
 	 *
 	 * @param int $num_sections Number of front page sections.
 	 */

@@ -3,8 +3,8 @@
  * Template part for displaying pages on front page
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  * @version 1.0
  */
 
@@ -22,9 +22,9 @@ global $philippeccounter;
 		$ratio = $thumbnail[2] / $thumbnail[1] * 100;
 		?>
 
-		<div class="panel-image" style="background-image: url(<?php echo esc_url($thumbnail[0]); ?>);">
-			<div class="panel-image-prop" style="padding-top: <?php echo esc_attr($ratio); ?>%"></div>
-		</div><!-- .panel-image -->
+			<div class="panel-image" style="background-image: url(<?php echo esc_url($thumbnail[0]); ?>);">
+				<div class="panel-image-prop" style="padding-top: <?php echo esc_attr($ratio); ?>%"></div>
+			</div><!-- .panel-image -->
 
 	<?php endif; ?>
 
@@ -54,31 +54,31 @@ global $philippeccounter;
 			if (get_the_ID() === (int) get_option('page_for_posts')):
 				?>
 
-				<?php
-				// Show three most recent posts.
-				$recent_posts = new WP_Query(
-					array(
-						'posts_per_page' => 3,
-						'post_status' => 'publish',
-						'ignore_sticky_posts' => true,
-						'no_found_rows' => true,
-					)
-				);
-				?>
+					<?php
+					// Show three most recent posts.
+					$recent_posts = new WP_Query(
+						array(
+							'posts_per_page' => 3,
+							'post_status' => 'publish',
+							'ignore_sticky_posts' => true,
+							'no_found_rows' => true,
+						)
+					);
+					?>
 
-				<?php if ($recent_posts->have_posts()): ?>
+					<?php if ($recent_posts->have_posts()): ?>
 
-					<div class="recent-posts">
+							<div class="recent-posts">
 
-						<?php
-						while ($recent_posts->have_posts()):
-							$recent_posts->the_post();
-							get_template_part('template-parts/post/content', 'excerpt');
-						endwhile;
-						wp_reset_postdata();
-						?>
-					</div><!-- .recent-posts -->
-				<?php endif; ?>
+								<?php
+								while ($recent_posts->have_posts()):
+									$recent_posts->the_post();
+									get_template_part('template-parts/post/content', 'excerpt');
+								endwhile;
+								wp_reset_postdata();
+								?>
+							</div><!-- .recent-posts -->
+					<?php endif; ?>
 			<?php endif; ?>
 
 		</div><!-- .wrap -->

@@ -1,5 +1,5 @@
 /*
-Theme Name: Twenty Seventeen
+Theme Name: PhilippeC
 Description: Used to style blocks in the editor.
 */
 
@@ -26,7 +26,7 @@ Description: Used to style blocks in the editor.
 }
 
 .editor-default-block-appender textarea.editor-default-block-appender__content {
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Libre Franklin', 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 
 .edit-post-visual-editor .editor-block-list__block {
@@ -35,14 +35,13 @@ Description: Used to style blocks in the editor.
 
 .editor-post-title__block .editor-post-title__input {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: 'Libre Franklin', 'Helvetica Neue', helvetica, arial, sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-weight: 300;
 }
 
 @media screen and (min-width: 30em) {
-
 	.edit-post-visual-editor .editor-block-list__block {
 		font-size: 18px;
 		font-size: 1.125rem;
@@ -85,7 +84,6 @@ Description: Used to style blocks in the editor.
 }
 
 @media screen and (min-width: 48em) {
-
 	.edit-post-visual-editor .editor-block-list__block {
 		font-size: 16px;
 		font-size: 1rem;
@@ -98,252 +96,252 @@ Description: Used to style blocks in the editor.
 
 /* Typography for Arabic Font */
 
-html[lang="ar"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="ary"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="azb"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="fa-IR"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="haz"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="ps"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="ur"] .edit-post-visual-editor .editor-block-list__block {
+html[lang='ar'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='ary'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='azb'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='fa-IR'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='haz'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='ps'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='ur'] .edit-post-visual-editor .editor-block-list__block {
 	font-family: Tahoma, Arial, sans-serif;
 }
 
-html[lang="ar"] .edit-post-visual-editor h1,
-html[lang="ar"] .edit-post-visual-editor h2,
-html[lang="ar"] .edit-post-visual-editor h3,
-html[lang="ar"] .edit-post-visual-editor h4,
-html[lang="ar"] .edit-post-visual-editor h5,
-html[lang="ar"] .edit-post-visual-editor h6,
-html[lang="ary"] .edit-post-visual-editor h1,
-html[lang="ary"] .edit-post-visual-editor h2,
-html[lang="ary"] .edit-post-visual-editor h3,
-html[lang="ary"] .edit-post-visual-editor h4,
-html[lang="ary"] .edit-post-visual-editor h5,
-html[lang="ary"] .edit-post-visual-editor h6,
-html[lang="azb"] .edit-post-visual-editor h1,
-html[lang="azb"] .edit-post-visual-editor h2,
-html[lang="azb"] .edit-post-visual-editor h3,
-html[lang="azb"] .edit-post-visual-editor h4,
-html[lang="azb"] .edit-post-visual-editor h5,
-html[lang="azb"] .edit-post-visual-editor h6,
-html[lang="fa-IR"] .edit-post-visual-editor h1,
-html[lang="fa-IR"] .edit-post-visual-editor h2,
-html[lang="fa-IR"] .edit-post-visual-editor h3,
-html[lang="fa-IR"] .edit-post-visual-editor h4,
-html[lang="fa-IR"] .edit-post-visual-editor h5,
-html[lang="fa-IR"] .edit-post-visual-editor h6,
-html[lang="haz"] .edit-post-visual-editor h1,
-html[lang="haz"] .edit-post-visual-editor h2,
-html[lang="haz"] .edit-post-visual-editor h3,
-html[lang="haz"] .edit-post-visual-editor h4,
-html[lang="haz"] .edit-post-visual-editor h5,
-html[lang="haz"] .edit-post-visual-editor h6,
-html[lang="ps"] .edit-post-visual-editor h1,
-html[lang="ps"] .edit-post-visual-editor h2,
-html[lang="ps"] .edit-post-visual-editor h3,
-html[lang="ps"] .edit-post-visual-editor h4,
-html[lang="ps"] .edit-post-visual-editor h5,
-html[lang="ps"] .edit-post-visual-editor h6,
-html[lang="ur"] .edit-post-visual-editor h1,
-html[lang="ur"] .edit-post-visual-editor h2,
-html[lang="ur"] .edit-post-visual-editor h3,
-html[lang="ur"] .edit-post-visual-editor h4,
-html[lang="ur"] .edit-post-visual-editor h5,
-html[lang="ur"] .edit-post-visual-editor h6 {
+html[lang='ar'] .edit-post-visual-editor h1,
+html[lang='ar'] .edit-post-visual-editor h2,
+html[lang='ar'] .edit-post-visual-editor h3,
+html[lang='ar'] .edit-post-visual-editor h4,
+html[lang='ar'] .edit-post-visual-editor h5,
+html[lang='ar'] .edit-post-visual-editor h6,
+html[lang='ary'] .edit-post-visual-editor h1,
+html[lang='ary'] .edit-post-visual-editor h2,
+html[lang='ary'] .edit-post-visual-editor h3,
+html[lang='ary'] .edit-post-visual-editor h4,
+html[lang='ary'] .edit-post-visual-editor h5,
+html[lang='ary'] .edit-post-visual-editor h6,
+html[lang='azb'] .edit-post-visual-editor h1,
+html[lang='azb'] .edit-post-visual-editor h2,
+html[lang='azb'] .edit-post-visual-editor h3,
+html[lang='azb'] .edit-post-visual-editor h4,
+html[lang='azb'] .edit-post-visual-editor h5,
+html[lang='azb'] .edit-post-visual-editor h6,
+html[lang='fa-IR'] .edit-post-visual-editor h1,
+html[lang='fa-IR'] .edit-post-visual-editor h2,
+html[lang='fa-IR'] .edit-post-visual-editor h3,
+html[lang='fa-IR'] .edit-post-visual-editor h4,
+html[lang='fa-IR'] .edit-post-visual-editor h5,
+html[lang='fa-IR'] .edit-post-visual-editor h6,
+html[lang='haz'] .edit-post-visual-editor h1,
+html[lang='haz'] .edit-post-visual-editor h2,
+html[lang='haz'] .edit-post-visual-editor h3,
+html[lang='haz'] .edit-post-visual-editor h4,
+html[lang='haz'] .edit-post-visual-editor h5,
+html[lang='haz'] .edit-post-visual-editor h6,
+html[lang='ps'] .edit-post-visual-editor h1,
+html[lang='ps'] .edit-post-visual-editor h2,
+html[lang='ps'] .edit-post-visual-editor h3,
+html[lang='ps'] .edit-post-visual-editor h4,
+html[lang='ps'] .edit-post-visual-editor h5,
+html[lang='ps'] .edit-post-visual-editor h6,
+html[lang='ur'] .edit-post-visual-editor h1,
+html[lang='ur'] .edit-post-visual-editor h2,
+html[lang='ur'] .edit-post-visual-editor h3,
+html[lang='ur'] .edit-post-visual-editor h4,
+html[lang='ur'] .edit-post-visual-editor h5,
+html[lang='ur'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 }
 
 /* Typography for Chinese Font */
 
-html[lang^="zh-"] .edit-post-visual-editor .editor-block-list__block {
-	font-family: "PingFang TC", "Helvetica Neue", Helvetica, STHeitiTC-Light, Arial, sans-serif;
+html[lang^='zh-'] .edit-post-visual-editor .editor-block-list__block {
+	font-family: 'PingFang TC', 'Helvetica Neue', Helvetica, STHeitiTC-Light, Arial, sans-serif;
 }
 
-html[lang="zh-CN"] .edit-post-visual-editor .editor-block-list__block {
-	font-family: "PingFang SC", "Helvetica Neue", Helvetica, STHeitiSC-Light, Arial, sans-serif;
+html[lang='zh-CN'] .edit-post-visual-editor .editor-block-list__block {
+	font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, STHeitiSC-Light, Arial, sans-serif;
 }
 
-html[lang^="zh-"] .edit-post-visual-editor h1,
-html[lang^="zh-"] .edit-post-visual-editor h2,
-html[lang^="zh-"] .edit-post-visual-editor h3,
-html[lang^="zh-"] .edit-post-visual-editor h4,
-html[lang^="zh-"] .edit-post-visual-editor h5,
-html[lang^="zh-"] .edit-post-visual-editor h6 {
+html[lang^='zh-'] .edit-post-visual-editor h1,
+html[lang^='zh-'] .edit-post-visual-editor h2,
+html[lang^='zh-'] .edit-post-visual-editor h3,
+html[lang^='zh-'] .edit-post-visual-editor h4,
+html[lang^='zh-'] .edit-post-visual-editor h5,
+html[lang^='zh-'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 }
 
 /* Typography for Cyrillic Font */
 
-html[lang="bg-BG"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="ru-RU"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="uk"] .edit-post-visual-editor .editor-block-list__block {
-	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+html[lang='bg-BG'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='ru-RU'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='uk'] .edit-post-visual-editor .editor-block-list__block {
+	font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
 }
 
-html[lang="bg-BG"] .edit-post-visual-editor h1,
-html[lang="bg-BG"] .edit-post-visual-editor h2,
-html[lang="bg-BG"] .edit-post-visual-editor h3,
-html[lang="bg-BG"] .edit-post-visual-editor h4,
-html[lang="bg-BG"] .edit-post-visual-editor h5,
-html[lang="bg-BG"] .edit-post-visual-editor h6,
-html[lang="ru-RU"] .edit-post-visual-editor h1,
-html[lang="ru-RU"] .edit-post-visual-editor h2,
-html[lang="ru-RU"] .edit-post-visual-editor h3,
-html[lang="ru-RU"] .edit-post-visual-editor h4,
-html[lang="ru-RU"] .edit-post-visual-editor h5,
-html[lang="ru-RU"] .edit-post-visual-editor h6,
-html[lang="uk"] .edit-post-visual-editor h1,
-html[lang="uk"] .edit-post-visual-editor h2,
-html[lang="uk"] .edit-post-visual-editor h3,
-html[lang="uk"] .edit-post-visual-editor h4,
-html[lang="uk"] .edit-post-visual-editor h5,
-html[lang="uk"] .edit-post-visual-editor h6 {
+html[lang='bg-BG'] .edit-post-visual-editor h1,
+html[lang='bg-BG'] .edit-post-visual-editor h2,
+html[lang='bg-BG'] .edit-post-visual-editor h3,
+html[lang='bg-BG'] .edit-post-visual-editor h4,
+html[lang='bg-BG'] .edit-post-visual-editor h5,
+html[lang='bg-BG'] .edit-post-visual-editor h6,
+html[lang='ru-RU'] .edit-post-visual-editor h1,
+html[lang='ru-RU'] .edit-post-visual-editor h2,
+html[lang='ru-RU'] .edit-post-visual-editor h3,
+html[lang='ru-RU'] .edit-post-visual-editor h4,
+html[lang='ru-RU'] .edit-post-visual-editor h5,
+html[lang='ru-RU'] .edit-post-visual-editor h6,
+html[lang='uk'] .edit-post-visual-editor h1,
+html[lang='uk'] .edit-post-visual-editor h2,
+html[lang='uk'] .edit-post-visual-editor h3,
+html[lang='uk'] .edit-post-visual-editor h4,
+html[lang='uk'] .edit-post-visual-editor h5,
+html[lang='uk'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 	line-height: 1.2;
 }
 
 /* Typography for Devanagari Font */
 
-html[lang="bn-BD"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="hi-IN"] .edit-post-visual-editor .editor-block-list__block,
-html[lang="mr-IN"] .edit-post-visual-editor .editor-block-list__block {
+html[lang='bn-BD'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='hi-IN'] .edit-post-visual-editor .editor-block-list__block,
+html[lang='mr-IN'] .edit-post-visual-editor .editor-block-list__block {
 	font-family: Arial, sans-serif;
 }
 
-html[lang="bn-BD"] .edit-post-visual-editor h1,
-html[lang="bn-BD"] .edit-post-visual-editor h2,
-html[lang="bn-BD"] .edit-post-visual-editor h3,
-html[lang="bn-BD"] .edit-post-visual-editor h4,
-html[lang="bn-BD"] .edit-post-visual-editor h5,
-html[lang="bn-BD"] .edit-post-visual-editor h6,
-html[lang="hi-IN"] .edit-post-visual-editor h1,
-html[lang="hi-IN"] .edit-post-visual-editor h2,
-html[lang="hi-IN"] .edit-post-visual-editor h3,
-html[lang="hi-IN"] .edit-post-visual-editor h4,
-html[lang="hi-IN"] .edit-post-visual-editor h5,
-html[lang="hi-IN"] .edit-post-visual-editor h6,
-html[lang="mr-IN"] .edit-post-visual-editor h1,
-html[lang="mr-IN"] .edit-post-visual-editor h2,
-html[lang="mr-IN"] .edit-post-visual-editor h3,
-html[lang="mr-IN"] .edit-post-visual-editor h4,
-html[lang="mr-IN"] .edit-post-visual-editor h5,
-html[lang="mr-IN"] .edit-post-visual-editor h6 {
+html[lang='bn-BD'] .edit-post-visual-editor h1,
+html[lang='bn-BD'] .edit-post-visual-editor h2,
+html[lang='bn-BD'] .edit-post-visual-editor h3,
+html[lang='bn-BD'] .edit-post-visual-editor h4,
+html[lang='bn-BD'] .edit-post-visual-editor h5,
+html[lang='bn-BD'] .edit-post-visual-editor h6,
+html[lang='hi-IN'] .edit-post-visual-editor h1,
+html[lang='hi-IN'] .edit-post-visual-editor h2,
+html[lang='hi-IN'] .edit-post-visual-editor h3,
+html[lang='hi-IN'] .edit-post-visual-editor h4,
+html[lang='hi-IN'] .edit-post-visual-editor h5,
+html[lang='hi-IN'] .edit-post-visual-editor h6,
+html[lang='mr-IN'] .edit-post-visual-editor h1,
+html[lang='mr-IN'] .edit-post-visual-editor h2,
+html[lang='mr-IN'] .edit-post-visual-editor h3,
+html[lang='mr-IN'] .edit-post-visual-editor h4,
+html[lang='mr-IN'] .edit-post-visual-editor h5,
+html[lang='mr-IN'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 }
 
 /* Typography for Greek Font */
 
-html[lang="el"] .edit-post-visual-editor .editor-block-list__block {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+html[lang='el'] .edit-post-visual-editor .editor-block-list__block {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-html[lang="el"] .edit-post-visual-editor h1,
-html[lang="el"] .edit-post-visual-editor h2,
-html[lang="el"] .edit-post-visual-editor h3,
-html[lang="el"] .edit-post-visual-editor h4,
-html[lang="el"] .edit-post-visual-editor h5,
-html[lang="el"] .edit-post-visual-editor h6 {
+html[lang='el'] .edit-post-visual-editor h1,
+html[lang='el'] .edit-post-visual-editor h2,
+html[lang='el'] .edit-post-visual-editor h3,
+html[lang='el'] .edit-post-visual-editor h4,
+html[lang='el'] .edit-post-visual-editor h5,
+html[lang='el'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 	line-height: 1.3;
 }
 
 /* Typography for Gujarati Font */
 
-html[lang="gu-IN"] .edit-post-visual-editor .editor-block-list__block {
+html[lang='gu-IN'] .edit-post-visual-editor .editor-block-list__block {
 	font-family: Arial, sans-serif;
 }
 
-html[lang="gu-IN"] .edit-post-visual-editor h1,
-html[lang="gu-IN"] .edit-post-visual-editor h2,
-html[lang="gu-IN"] .edit-post-visual-editor h3,
-html[lang="gu-IN"] .edit-post-visual-editor h4,
-html[lang="gu-IN"] .edit-post-visual-editor h5,
-html[lang="gu-IN"] .edit-post-visual-editor h6 {
+html[lang='gu-IN'] .edit-post-visual-editor h1,
+html[lang='gu-IN'] .edit-post-visual-editor h2,
+html[lang='gu-IN'] .edit-post-visual-editor h3,
+html[lang='gu-IN'] .edit-post-visual-editor h4,
+html[lang='gu-IN'] .edit-post-visual-editor h5,
+html[lang='gu-IN'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 }
 
 /* Typography for Hebrew Font */
 
-html[lang="he-IL"] .edit-post-visual-editor .editor-block-list__block {
-	font-family: "Arial Hebrew", Arial, sans-serif;
+html[lang='he-IL'] .edit-post-visual-editor .editor-block-list__block {
+	font-family: 'Arial Hebrew', Arial, sans-serif;
 }
 
-html[lang="he-IL"] .edit-post-visual-editor h1,
-html[lang="he-IL"] .edit-post-visual-editor h2,
-html[lang="he-IL"] .edit-post-visual-editor h3,
-html[lang="he-IL"] .edit-post-visual-editor h4,
-html[lang="he-IL"] .edit-post-visual-editor h5,
-html[lang="he-IL"] .edit-post-visual-editor h6 {
+html[lang='he-IL'] .edit-post-visual-editor h1,
+html[lang='he-IL'] .edit-post-visual-editor h2,
+html[lang='he-IL'] .edit-post-visual-editor h3,
+html[lang='he-IL'] .edit-post-visual-editor h4,
+html[lang='he-IL'] .edit-post-visual-editor h5,
+html[lang='he-IL'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 }
 
 /* Typography for Japanese Font */
 
-html[lang="ja"] .edit-post-visual-editor .editor-block-list__block {
-	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+html[lang='ja'] .edit-post-visual-editor .editor-block-list__block {
+	font-family: 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
 }
 
-html[lang="ja"] .edit-post-visual-editor h1,
-html[lang="ja"] .edit-post-visual-editor h2,
-html[lang="ja"] .edit-post-visual-editor h3,
-html[lang="ja"] .edit-post-visual-editor h4,
-html[lang="ja"] .edit-post-visual-editor h5,
-html[lang="ja"] .edit-post-visual-editor h6 {
+html[lang='ja'] .edit-post-visual-editor h1,
+html[lang='ja'] .edit-post-visual-editor h2,
+html[lang='ja'] .edit-post-visual-editor h3,
+html[lang='ja'] .edit-post-visual-editor h4,
+html[lang='ja'] .edit-post-visual-editor h5,
+html[lang='ja'] .edit-post-visual-editor h6 {
 	font-weight: 700;
 }
 
 /* Typography for Korean font */
 
-html[lang="ko-KR"] .edit-post-visual-editor .editor-block-list__block {
-	font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", Dotum, sans-serif;
+html[lang='ko-KR'] .edit-post-visual-editor .editor-block-list__block {
+	font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', Dotum, sans-serif;
 }
 
-html[lang="ko-KR"] .edit-post-visual-editor h1,
-html[lang="ko-KR"] .edit-post-visual-editor h2,
-html[lang="ko-KR"] .edit-post-visual-editor h3,
-html[lang="ko-KR"] .edit-post-visual-editor h4,
-html[lang="ko-KR"] .edit-post-visual-editor h5,
-html[lang="ko-KR"] .edit-post-visual-editor h6 {
+html[lang='ko-KR'] .edit-post-visual-editor h1,
+html[lang='ko-KR'] .edit-post-visual-editor h2,
+html[lang='ko-KR'] .edit-post-visual-editor h3,
+html[lang='ko-KR'] .edit-post-visual-editor h4,
+html[lang='ko-KR'] .edit-post-visual-editor h5,
+html[lang='ko-KR'] .edit-post-visual-editor h6 {
 	font-weight: 600;
 }
 
 /* Typography for Thai Font */
 
-html[lang="th"] .edit-post-visual-editor .editor-block-list__block {
+html[lang='th'] .edit-post-visual-editor .editor-block-list__block {
 	line-height: 1.8;
-	font-family: "Sukhumvit Set", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Sukhumvit Set', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-html[lang="th"] .edit-post-visual-editor h1,
-html[lang="th"] .edit-post-visual-editor h2,
-html[lang="th"] .edit-post-visual-editor h3,
-html[lang="th"] .edit-post-visual-editor h4,
-html[lang="th"] .edit-post-visual-editor h5,
-html[lang="th"] .edit-post-visual-editor h6 {
+html[lang='th'] .edit-post-visual-editor h1,
+html[lang='th'] .edit-post-visual-editor h2,
+html[lang='th'] .edit-post-visual-editor h3,
+html[lang='th'] .edit-post-visual-editor h4,
+html[lang='th'] .edit-post-visual-editor h5,
+html[lang='th'] .edit-post-visual-editor h6 {
 	line-height: 1.65;
-	font-family: "Sukhumvit Set", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Sukhumvit Set', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* Remove letter-spacing for all non-latin alphabets */
 
-html[lang="ar"] .edit-post-visual-editor *,
-html[lang="ary"] .edit-post-visual-editor *,
-html[lang="azb"] .edit-post-visual-editor *,
-html[lang="haz"] .edit-post-visual-editor *,
-html[lang="ps"] .edit-post-visual-editor *,
-html[lang^="zh-"] .edit-post-visual-editor *,
-html[lang="bg-BG"] .edit-post-visual-editor *,
-html[lang="ru-RU"] .edit-post-visual-editor *,
-html[lang="uk"] .edit-post-visual-editor *,
-html[lang="bn-BD"] .edit-post-visual-editor *,
-html[lang="hi-IN"] .edit-post-visual-editor *,
-html[lang="mr-IN"] .edit-post-visual-editor *,
-html[lang="el"] .edit-post-visual-editor *,
-html[lang="gu-IN"] .edit-post-visual-editor *,
-html[lang="he-IL"] .edit-post-visual-editor *,
-html[lang="ja"] .edit-post-visual-editor *,
-html[lang="ko-KR"] .edit-post-visual-editor *,
-html[lang="th"] .edit-post-visual-editor * {
+html[lang='ar'] .edit-post-visual-editor *,
+html[lang='ary'] .edit-post-visual-editor *,
+html[lang='azb'] .edit-post-visual-editor *,
+html[lang='haz'] .edit-post-visual-editor *,
+html[lang='ps'] .edit-post-visual-editor *,
+html[lang^='zh-'] .edit-post-visual-editor *,
+html[lang='bg-BG'] .edit-post-visual-editor *,
+html[lang='ru-RU'] .edit-post-visual-editor *,
+html[lang='uk'] .edit-post-visual-editor *,
+html[lang='bn-BD'] .edit-post-visual-editor *,
+html[lang='hi-IN'] .edit-post-visual-editor *,
+html[lang='mr-IN'] .edit-post-visual-editor *,
+html[lang='el'] .edit-post-visual-editor *,
+html[lang='gu-IN'] .edit-post-visual-editor *,
+html[lang='he-IL'] .edit-post-visual-editor *,
+html[lang='ja'] .edit-post-visual-editor *,
+html[lang='ko-KR'] .edit-post-visual-editor *,
+html[lang='th'] .edit-post-visual-editor * {
 	letter-spacing: 0 !important;
 }
 
@@ -460,17 +458,17 @@ html[lang="th"] .edit-post-visual-editor * {
 
 /* Caption styles */
 
-[class^="wp-block-"]:not(.wp-block-gallery) > figcaption,
-[class*=" wp-block-"]:not(.wp-block-gallery) > figcaption {
+[class^='wp-block-']:not(.wp-block-gallery) > figcaption,
+[class*=' wp-block-']:not(.wp-block-gallery) > figcaption {
 	font-style: italic;
 	margin-bottom: 1.5em;
 	text-align: left;
 }
 
-.rtl [class^="wp-block-"]:not(.wp-block-gallery) > figcaption,
-.rtl [class*=" wp-block-"]:not(.wp-block-gallery) > figcaption,
-[dir="rtl"] [class^="wp-block-"]:not(.wp-block-gallery) > figcaption,
-[dir="rtl"] [class*=" wp-block-"]:not(.wp-block-gallery) > figcaption {
+.rtl [class^='wp-block-']:not(.wp-block-gallery) > figcaption,
+.rtl [class*=' wp-block-']:not(.wp-block-gallery) > figcaption,
+[dir='rtl'] [class^='wp-block-']:not(.wp-block-gallery) > figcaption,
+[dir='rtl'] [class*=' wp-block-']:not(.wp-block-gallery) > figcaption {
 	text-align: right;
 }
 
@@ -654,7 +652,6 @@ html[lang="th"] .edit-post-visual-editor * {
 	font-size: 20px;
 }
 
-
 .wp-block-pullquote .wp-block-pullquote__citation {
 	font-size: inherit;
 	font-weight: 600;
@@ -748,7 +745,7 @@ table.wp-block-table td:last-child {
 	white-space: pre-line;
 }
 
-.wp-block-button .wp-block-button__link[data-is-placeholder-visible="true"] {
+.wp-block-button .wp-block-button__link[data-is-placeholder-visible='true'] {
 	height: auto;
 }
 
@@ -773,9 +770,9 @@ table.wp-block-table td:last-child {
 
 /* Archives, Categories & Latest Posts */
 
-[data-align="center"] .wp-block-archives ul,
-[data-align="center"] .wp-block-categories ul,
-[data-align="center"] .wp-block-latest-posts ul {
+[data-align='center'] .wp-block-archives ul,
+[data-align='center'] .wp-block-categories ul,
+[data-align='center'] .wp-block-latest-posts ul {
 	list-style-position: inside;
 }
 

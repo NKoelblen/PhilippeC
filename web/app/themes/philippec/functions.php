@@ -1,16 +1,16 @@
 <?php
 /**
- * Twenty Seventeen functions and definitions
+ * PhilippeC functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  */
 
 /**
- * Twenty Seventeen only works in WordPress 4.7 or later.
+ * PhilippeC only works in WordPress 4.7 or later.
  */
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -173,22 +173,6 @@ function philippec_setup()
 			),
 		),
 
-		// Create the custom image attachments used as post thumbnails for pages.
-		'attachments' => array(
-			'image-espresso' => array(
-				'post_title' => _x('Espresso', 'Theme starter content', 'philippec'),
-				'file' => 'assets/images/espresso.jpg', // URL relative to the template directory.
-			),
-			'image-sandwich' => array(
-				'post_title' => _x('Sandwich', 'Theme starter content', 'philippec'),
-				'file' => 'assets/images/sandwich.jpg',
-			),
-			'image-coffee' => array(
-				'post_title' => _x('Coffee', 'Theme starter content', 'philippec'),
-				'file' => 'assets/images/coffee.jpg',
-			),
-		),
-
 		// Default to a static front page and assign the front and posts pages.
 		'options' => array(
 			'show_on_front' => 'page',
@@ -232,9 +216,9 @@ function philippec_setup()
 	);
 
 	/**
-	 * Filters Twenty Seventeen array of starter content.
+	 * Filters PhilippeC array of starter content.
 	 *
-	 * @since Twenty Seventeen 1.1
+	 * @since PhilippeC 1.1
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
@@ -274,9 +258,9 @@ function philippec_content_width()
 	}
 
 	/**
-	 * Filters Twenty Seventeen content width of the theme.
+	 * Filters PhilippeC content width of the theme.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since PhilippeC 1.0
 	 *
 	 * @param int $content_width Content width in pixels.
 	 */
@@ -288,8 +272,8 @@ if (!function_exists('philippec_fonts_url')):
 	/**
 	 * Register custom fonts.
 	 *
-	 * @since Twenty Seventeen 1.0
-	 * @since Twenty Seventeen 3.2 Replaced Google URL with self-hosted fonts.
+	 * @since PhilippeC 1.0
+	 * @since PhilippeC 3.2 Replaced Google URL with self-hosted fonts.
 	 *
 	 * @return string Fonts URL for the theme.
 	 */
@@ -314,8 +298,8 @@ endif;
 /**
  * Add preconnect for Google Fonts.
  *
- * @since Twenty Seventeen 1.0
- * @deprecated Twenty Seventeen 3.2 Disabled filter because, by default, fonts are self-hosted.
+ * @since PhilippeC 1.0
+ * @deprecated PhilippeC 3.2 Disabled filter because, by default, fonts are self-hosted.
  *
  * @param array  $urls          URLs to print for resource hints.
  * @param string $relation_type The relation type the URLs are printed.
@@ -383,7 +367,7 @@ add_action('widgets_init', 'philippec_widgets_init');
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
  * a 'Continue reading' link.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  *
  * @param string $link Link to single post/page.
  * @return string 'Continue reading' link prepended with an ellipsis.
@@ -409,7 +393,7 @@ add_filter('excerpt_more', 'philippec_excerpt_more');
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  */
 function philippec_javascript_detection()
 {
@@ -547,7 +531,7 @@ add_action('wp_enqueue_scripts', 'philippec_scripts');
 /**
  * Enqueues styles for the block-based editor.
  *
- * @since Twenty Seventeen 1.8
+ * @since PhilippeC 1.8
  */
 function philippec_block_editor_styles()
 {
@@ -563,7 +547,7 @@ add_action('enqueue_block_editor_assets', 'philippec_block_editor_styles');
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  *
  * @param string $sizes A source size value for use in a 'sizes' attribute.
  * @param array  $size  Image size. Accepts an array of width and height
@@ -591,8 +575,8 @@ add_filter('wp_calculate_image_sizes', 'philippec_content_image_sizes_attr', 10,
 /**
  * Filters the `sizes` value in the header image markup.
  *
- * @since Twenty Seventeen 1.0
- * @since Twenty Seventeen 3.7 Added larger image size for small screens.
+ * @since PhilippeC 1.0
+ * @since PhilippeC 3.7 Added larger image size for small screens.
  *
  * @param string $html   The HTML image tag markup being filtered.
  * @param object $header The custom header object returned by 'get_custom_header()'.
@@ -612,7 +596,7 @@ add_filter('get_header_image_tag', 'philippec_header_image_tag', 10, 3);
  * Add custom image sizes attribute to enhance responsive image functionality
  * for post thumbnails.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  *
  * @param string[]     $attr       Array of attribute values for the image markup, keyed by attribute name.
  *                                 See wp_get_attachment_image().
@@ -636,7 +620,7 @@ add_filter('wp_get_attachment_image_attributes', 'philippec_post_thumbnail_sizes
 /**
  * Use front-page.php when Front page displays is set to a static page.
  *
- * @since Twenty Seventeen 1.0
+ * @since PhilippeC 1.0
  *
  * @param string $template front-page.php.
  * @return string The template to be used: blank if is_home() is true (defaults to index.php),
@@ -652,7 +636,7 @@ add_filter('frontpage_template', 'philippec_front_page_template');
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *
- * @since Twenty Seventeen 1.4
+ * @since PhilippeC 1.4
  *
  * @param array $args Arguments for tag cloud widget.
  * @return array The filtered arguments for tag cloud widget.
@@ -676,7 +660,7 @@ add_filter('widget_tag_cloud_args', 'philippec_widget_tag_cloud_args');
  * with the optional prefix. As such the returned value is not universally unique,
  * but it is unique across the life of the PHP process.
  *
- * @since Twenty Seventeen 2.0
+ * @since PhilippeC 2.0
  *
  * @see wp_unique_id() Themes requiring WordPress 5.0.3 and greater should use this instead.
  *
@@ -720,7 +704,7 @@ endif;
  *         '__return_false'
  *     );
  *
- * @since Twenty Seventeen 3.7
+ * @since PhilippeC 3.7
  *
  * @return bool Whether the post thumbnail should be shown.
  */
@@ -754,8 +738,3 @@ require get_parent_theme_file_path('/inc/customizer.php');
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path('/inc/icon-functions.php');
-
-/**
- * Block Patterns.
- */
-require get_template_directory() . '/inc/block-patterns.php';

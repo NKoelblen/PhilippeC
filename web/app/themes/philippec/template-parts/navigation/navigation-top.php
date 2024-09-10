@@ -3,8 +3,8 @@
  * Displays top navigation
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @subpackage PhilippeC
+ * @since PhilippeC 1.0
  * @version 1.2
  */
 
@@ -28,13 +28,12 @@
 	?>
 
 	<?php if ((philippec_is_frontpage() || (is_home() && is_front_page())) && has_custom_header()): ?>
-		<a href="#content"
-			class="menu-scroll-down"><?php echo philippec_get_svg(array('icon' => 'arrow-right')); ?><span
-				class="screen-reader-text">
-				<?php
-				/* translators: Hidden accessibility text. */
-				_e('Scroll down to content', 'philippec');
-				?>
-			</span></a>
+			<a href="#content" class="menu-scroll-down"><?php echo philippec_get_svg(array('icon' => 'arrow-right')); ?><span
+					class="screen-reader-text">
+					<?php
+					/* translators: Hidden accessibility text. */
+					_e('Scroll down to content', 'philippec');
+					?>
+				</span></a>
 	<?php endif; ?>
 </nav><!-- #site-navigation -->
